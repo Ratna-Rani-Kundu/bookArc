@@ -1,4 +1,5 @@
 const searchBook = () => {
+  //catch seach field
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     // clear data
@@ -18,7 +19,7 @@ const searchBook = () => {
 
  const displaySearchResult= books =>{
 
-  //total sreach info
+  //total sreach info and display that
     const amountOfBooks=books.length;
      const totalSearch = document.getElementById('total-search');
      totalSearch.textContent = '';
@@ -26,12 +27,16 @@ const searchBook = () => {
      p.classList.add('text-center')
      p.innerHTML=`Total search result : ${amountOfBooks}`; 
      totalSearch.appendChild(p);
+
      // book search result
      const searchResult = document.getElementById('search-result');
-     
+
+     //clear book result
      searchResult.textContent = '';
+
+     //catch every book throw loop
      books?.forEach(book =>{
-    
+       //div creation and push inner html
      const div = document.createElement('div');
      div.classList.add('col');
      div.innerHTML = `
@@ -46,8 +51,7 @@ const searchBook = () => {
         </div>
       </div>
        `;
+       //push created div to the parent div
        searchResult.appendChild(div);
      });
-    
-
 }

@@ -10,11 +10,14 @@
 </head>
 <body>
     <h2 class="text-success text-center mt-4">Welcome to Book-Archive</h2>
+
     <!-- search box -->
 
     <div class="input-group mb-3 mx-auto w-50 mt-4">
+        <!-- input area -->
         <input id="search-field" type="text" class="form-control" placeholder="Enter any book name" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button onclick="searchBook()" class="btn btn-outline-secondary" type="button" id="search-btn">search</button>
+        <!-- search button -->
+        <button onclick="searchBook()" class="btn btn-outline-secondary" type="button">search</button>
       </div>
       <!-- total search amount -->
       <div id="total-search">
@@ -24,9 +27,6 @@
       <!-- book search result -->
       <div id="search-result" class="row  row-cols-1 row-cols-md-3 g-4 container">
       </div>
-
-
-
 
 <!-- bootstrap script -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
