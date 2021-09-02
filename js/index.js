@@ -17,13 +17,16 @@ const searchBook = () => {
 //display sreach result
 
  const displaySearchResult= books =>{
+
+  //total sreach info
     const amountOfBooks=books.length;
      const totalSearch = document.getElementById('total-search');
+     totalSearch.textContent = '';
      const p = document.createElement('p');
      p.classList.add('text-center')
      p.innerHTML=`Total search result : ${amountOfBooks}`; 
      totalSearch.appendChild(p);
-     
+     // book search result
      const searchResult = document.getElementById('search-result');
      
      searchResult.textContent = '';
