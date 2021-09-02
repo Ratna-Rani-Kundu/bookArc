@@ -13,10 +13,22 @@ const searchBook = () => {
             .then(data => displaySearchResult(data.docs));
             
 }
+
+//display sreach result
+
  const displaySearchResult= books =>{
-     const searchResult = document.getElementById('search-result')
-     books.forEach(book =>{
-     console.log(book)
+    const amountOfBooks=books.length;
+     const totalSearch = document.getElementById('total-search');
+     const p = document.createElement('p');
+     p.classList.add('text-center')
+     p.innerHTML=`Total search result : ${amountOfBooks}`; 
+     totalSearch.appendChild(p);
+     
+     const searchResult = document.getElementById('search-result');
+     
+     searchResult.textContent = '';
+     books?.forEach(book =>{
+    
      const div = document.createElement('div');
      div.classList.add('col');
      div.innerHTML = `
